@@ -5,3 +5,28 @@ version = 3
 [[package]]
 name = "e_rus_"
 version = "0.1.0"
+dependencies = [
+ "printf",
+]
+
+[[package]]
+name = "gcc"
+version = "0.3.55"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8f5f3913fa0bfe7ee1fd8248b6b9f42a5af4b9d65ec2dd2c3c26132b950ecfc2"
+
+[[package]]
+name = "libc"
+version = "0.2.126"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "349d5a591cd28b49e1d1037471617a32ddcda5731b99419008085f72d5a53836"
+
+[[package]]
+name = "printf"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "15343a566c054c72bdc3f3f138002a87e5320d7389c9713112c9b77e83539141"
+dependencies = [
+ "gcc",
+ "libc",
+]

@@ -1,5 +1,37 @@
 //use std::fmt;
 
+use printf;
+
+use std::env;
+use std::fs::File;
+use std::io::Write;
+
+use std::path::PathBuf;
+
+struct FileManger {
+    a_dir: PathBuf,
+}
+
+impl FileManger {
+    fn set_dir() {
+        let mut path = PathBuf::new();
+    }
+    fn dump_data<'a, T>(&mut self, in_data: T, filename: &str) {
+        let mut path = PathBuf::from("/tmp");
+        path.push(filename);
+        self.a_dir = env::temp_dir();
+        let f_path = self.a_dir.join(filename);
+        let mut file = File::create(f_path).unwrap();
+
+        let mut buffer = [0u8; 4096];
+
+        //file.write(&buffer[..in_data]).unwrap()
+
+        //writeln!(&mut file, );
+    }
+}
+
+#[allow(dead_code)]
 #[derive(Debug)]
 struct TestStruct<'a> {
     id: isize,
@@ -13,7 +45,6 @@ impl<'a> TestStruct<'a> {
         println!("id:{} | val:{} | name:{}", self.id, self.val, self.name)
     }
 }
-
 
 fn main() {
     basefunc(3948.4)
@@ -38,17 +69,25 @@ fn otherstuctaction() {
     let x: u32 = 32;
     let namer = "somestnighname";
     //x as isize;gggggggg
-    let stringref: &str = "refstringo";
-    let *mut mpotrstr =  stringref
+    let mut strref_01: &str = "refstringo";
+    let _str_01_ptr: *const u8 = strref_01.as_ptr();
+    let mpotrstr: *mut &str = &mut strref_01;
+
+    let mut p = std::ptr::addr_of!(strref_01);
+
     let ts = TestStruct {
         val: 752.6,
         id: x as isize,
         name: namer.to_string(),
-        mutable_pointer: mpotrstr
+        mutable_pointer: mpotrstr,
     };
+    println!("{:?}", mpotrstr);
+    println!("{:?}", _str_01_ptr);
+    println!("{:?}", p);
 
     ts.print();
 }
+//libusb_set_log_cb
 
 #[cfg(test)]
 mod sample_test_modual {
