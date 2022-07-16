@@ -14,6 +14,7 @@ impl<'a> TestStruct<'a> {
     }
 }
 
+
 fn main() {
     basefunc(3948.4)
 }
