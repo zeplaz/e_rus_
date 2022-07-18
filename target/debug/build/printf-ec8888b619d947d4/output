@@ -1,0 +1,36 @@
+TARGET = Some("x86_64-pc-windows-msvc")
+OPT_LEVEL = Some("0")
+TARGET = Some("x86_64-pc-windows-msvc")
+HOST = Some("x86_64-pc-windows-msvc")
+TARGET = Some("x86_64-pc-windows-msvc")
+TARGET = Some("x86_64-pc-windows-msvc")
+HOST = Some("x86_64-pc-windows-msvc")
+CC_x86_64-pc-windows-msvc = None
+CC_x86_64_pc_windows_msvc = None
+HOST_CC = None
+CC = None
+TARGET = Some("x86_64-pc-windows-msvc")
+HOST = Some("x86_64-pc-windows-msvc")
+CFLAGS_x86_64-pc-windows-msvc = None
+CFLAGS_x86_64_pc_windows_msvc = None
+HOST_CFLAGS = None
+CFLAGS = None
+DEBUG = Some("true")
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.28.29910\\bin\\HostX64\\x64\\cl.exe" "/nologo" "/MD" "/Z7" "/W4" "/FoC:\\dev_world\\gitrepoz\\e_rus_\\target\\debug\\build\\printf-ec8888b619d947d4\\out\\src/printf_wrapper.o" "/c" "src/printf_wrapper.c"
+printf_wrapper.c
+src/printf_wrapper.c(11): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+exit code: 0
+TARGET = Some("x86_64-pc-windows-msvc")
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.28.29910\\bin\\HostX64\\x64\\lib.exe" "/OUT:C:\\dev_world\\gitrepoz\\e_rus_\\target\\debug\\build\\printf-ec8888b619d947d4\\out\\libprintf_wrapper.a" "/nologo" "C:\\dev_world\\gitrepoz\\e_rus_\\target\\debug\\build\\printf-ec8888b619d947d4\\out\\src/printf_wrapper.o"
+exit code: 0
+TARGET = Some("x86_64-pc-windows-msvc")
+HOST = Some("x86_64-pc-windows-msvc")
+TARGET = Some("x86_64-pc-windows-msvc")
+TARGET = Some("x86_64-pc-windows-msvc")
+HOST = Some("x86_64-pc-windows-msvc")
+CC_x86_64-pc-windows-msvc = None
+CC_x86_64_pc_windows_msvc = None
+HOST_CC = None
+CC = None
+cargo:rustc-link-lib=static=printf_wrapper
+cargo:rustc-link-search=native=C:\dev_world\gitrepoz\e_rus_\target\debug\build\printf-ec8888b619d947d4\out

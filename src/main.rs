@@ -8,6 +8,24 @@ use std::io::Write;
 
 use std::path::PathBuf;
 
+
+struct ID{
+
+    NEXT_ID: u16,
+
+}
+
+
+struct entity
+{
+
+}
+
+
+
+
+
+
 struct FileManger {
     a_dir: PathBuf,
 }
