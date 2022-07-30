@@ -1,15 +1,23 @@
 //use std::fmt;
 
-use printf;
+//use printf;
 
 use std::env;
 use std::fs::File;
 use std::io::Write;
-
 use std::path::PathBuf;
 
 struct FileManger {
     a_dir: PathBuf,
+}
+
+struct Tester<T, U> {
+    the_tested: T,
+    process_data: U,
+}
+
+trait<T, U> {
+    fn builduP_enity<T, U>(loc: T, &config_data: &U) {}
 }
 
 impl FileManger {
